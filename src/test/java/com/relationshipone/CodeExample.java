@@ -1,7 +1,6 @@
 package com.relationshipone;
 
 import org.junit.Test;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * Given the unsecured endpoint
@@ -20,11 +19,12 @@ import org.springframework.web.client.RestTemplate;
  * Don't over-engineer, but separate responsibility into different classes where reasonable.
  */
 public class CodeExample {
-
+	
     @Test
     public void example() {
+    	
         //Invoke your service(s) here. For example:
-        //new ExampleService().run();
+        new ExampleService().run();
 
         //Don't worry about asserts. We're just abusing @Test to make the code run.
     }
