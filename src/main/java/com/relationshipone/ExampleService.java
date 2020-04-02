@@ -4,6 +4,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
 import com.relationshipone.bean.AppRecordBean;
+import com.relationshipone.constants.RestConstants;
 import com.relationshipone.service.RestCaller;
 
 /**
@@ -19,8 +20,8 @@ public class ExampleService {
 
 	public void run() {
 
-		endpoint = "https://api.appcloud.relationshipone.com/appcloud/apps";
-		queryParams.add("eloquapackageId", "153");
+		endpoint = RestConstants.getApiUrl();
+		queryParams.add(RestConstants.getRequestParamKey(), RestConstants.getRequestParamValue());
 
 		AppRecordBean[] appRecords = restCaller.hitEndpoint(endpoint, queryParams);
 		
